@@ -61,7 +61,7 @@
 		-moz-animation-iteration-count: infinite;
 }
 .cssload-circle:nth-child(2) {
-	background: rgb(246,80,29);
+	background: #499848;
 	animation-name: cssload-explode;
 		-o-animation-name: cssload-explode;
 		-ms-animation-name: cssload-explode;

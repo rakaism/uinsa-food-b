@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
+Route::get('/menu',[App\Http\Controllers\HomeController::class, 'menu'])->name('menu');
+
+Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class,'index']);
