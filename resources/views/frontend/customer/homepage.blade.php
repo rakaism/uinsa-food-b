@@ -225,89 +225,8 @@
     </div>
   </div>
 </section>
-
-<!--Features section-->
-<section id="services" class="padding-bottom">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-         <h2 class="heading mt-8">Makanan &nbsp; Berat</h2>
-         <hr class="heading_space">
-         <div class="slider_wrap">
-        <div id="service-slider" class="owl-carousel">
-          <div class="item">
-            <div class="item_inner">
-            <div class="image">
-              <img src="{{ asset('frontend/images/ayam_bakar_1.png') }}" alt="Services Image">
-              <a  href="#"></a>
-            </div>
-              <h3><a href="#">Ayam Utuh Bakar Madu</a></h3>
-              <p>Enjoy Delicious Food!</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item_inner">
-              <div class="image">
-              <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Services Image">
-              <a  href="#"></a>
-              </div>
-              <h3><a href="#">Lobster Asam Manis</a></h3>
-              <p>Enjoy Delicious Food!</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item_inner">
-              <div class="image">
-              <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Services Image">
-              <a  href="#"></a>
-              </div>
-              <h3><a href="#">Lobster Asam Manis</a></h3>
-              <p>Enjoy Delicious Food!</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item_inner">
-              <div class="image">
-              <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Services Image">
-              <a  href="#"></a>
-              </div>
-              <h3><a href="#">Lobster Asam Manis</a></h3>
-              <p>Enjoy Delicious Food!</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item_inner">
-              <div class="image">
-              <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Services Image">
-              <a  href="#"></a>
-              </div>
-              <h3><a href="#">Lobster Asam Manis</a></h3>
-              <p>Enjoy Delicious Food!</p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <h2 class="heading">Harga &nbsp; Makanan</h2>
-        <hr class="heading_space">
-        <ul class="menu_widget">
-          <li>Ayam Utuh Bakar Madu<span>Rp. 100.000</span></li>
-          <li>Tumpeng Besar (8-10)<span>Rp. 549.00</span></li>
-          <li>Lobster Asam Manis<span>Rp. 350.00</span></li>
-          <li><span>INR 199.00</span></li>
-          <li>Baked Potato Jackets<span>INR 99.00</span></li>
-          <li>Mexican Taco<span>INR 899.00</span></li>
-          <li>Tex-Mex Chicken<span>INR 1250.00</span></li>
-          <li>Quesadillas Acapulco<span>INR 399.00</span></li>
-        </ul>
-        <a href="#" class="btn-common btn-white page-scroll" style="margin-top: 10px;">Beli Sekarang</a>
-      </div>
-    </div>
-  </div>
-</section> 
-
-
+<!-- MAKANAN BERAT -->
+@include('frontend.include.content.makanan_berat')
 <!-- jumlah -->
 <section id="facts">
   <div class="container">
@@ -345,61 +264,8 @@
   </div>
 </section>
 
-
-
-<!-- Our cheffs -->
-<section id="cheffs" class="padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-      <h2 class="heading">Our &nbsp; Kitchen &nbsp; Staff</h2>
-      <hr class="heading_space">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="cheffs_wrap_slider">
-          <div id="our-cheffs" class="owl-carousel">
-            <div class="item">
-              <div class="cheffs_wrap">
-               <img src="{{ asset('frontend/images/our-cheffs1.jpg') }}" alt="Kitchen Staff">
-               <h3>Stafeny Rose</h3>
-               <small>Head Of Kitchen</small>
-               <p>Enjoy Delicious Food!</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="cheffs_wrap">
-               <img src="{{ asset('frontend/images/our-cheffs2.jpg') }}" alt="Kitchen Staff">
-               <h3>Michael Reubens</h3>
-               <small>Food Supervisor</small>
-               <p>Enjoy Delicious Food!</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="cheffs_wrap">
-               <img src="{{ asset('frontend/images/our-cheffs3.jpg') }}" alt="Kitchen Staff">
-               <h3>Angle Maria</h3>
-               <small>Head Cook</small>
-               <p>Enjoy Delicious Food!</p>
-              </div>
-            </div>
-            <div class="item">
-              <div class="cheffs_wrap">
-               <img src="{{ asset('frontend/images/our-cheffs1.jpg') }}" alt="Kitchen Staff">
-               <h3>Stafeny Rose</h3>
-               <small>Food Supervisor</small>
-               <p>Enjoy Delicious Food!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+<!-- dESSERT -->
+@include('frontend.include.content.dessert')
 <!-- Our cheffs -->
 <section id="cheffs2">
   <div class="container">
@@ -451,83 +317,6 @@
     </div>
   </div>
 </section>
-
-{{-- 
-
-<!--Featured Receipes -->
-<section id="news" class="bg_grey padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-      <h2 class="heading">Featured &nbsp; Food &nbsp; Receipes</h2>
-      <hr class="heading_space">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="cheffs_wrap_slider">
-          <div id="news-slider" class="owl-carousel">
-            <div class="item">
-              <div class="news_content">
-               <img src="{{ asset('frontend/images/news-img3.jpg') }}" alt="Docotor">
-               <div class="date_comment">
-                  <span>22<small>apr</small></span>
-                  <a href="#."><i class="icon-comment"></i> 5</a>
-               </div>
-               <div class="comment_text">
-                 <h3><a href="#.">Quesadillas Acapulco</a></h3>
-                 <p>Enjoy Delicious Food!</p>
-               </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="news_content">
-               <img src="{{ asset('frontend/images/news-img2.jpg') }}" alt="Docotor">
-               <div class="date_comment">
-                  <span>22<small>apr</small></span>
-                  <a href="#."><i class="icon-comment"></i> 5</a>
-               </div>
-               <div class="comment_text">
-                 <h3><a href="#.">Barbecue Beef</a></h3>
-                 <p>Enjoy Delicious Food!</p>
-               </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="news_content">
-               <img src="images/news-img1.jpg" alt="Docotor">
-               <div class="date_comment">
-                  <span>22<small>apr</small></span>
-                  <a href="#."><i class="icon-comment"></i> 5</a>
-               </div>
-               <div class="comment_text">
-                 <h3><a href="#.">Mexican Taco</a></h3>
-                 <p>Enjoy Delicious Food!</p>
-               </div>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="news_content">
-               <img src="images/food-1.jpg" alt="Docotor">
-               <div class="date_comment">
-                  <span>22<small>apr</small></span>
-                   <a href="#."><i class="icon-comment"></i> 5</a>
-               </div>
-               <div class="comment_text">
-                 <h3><a href="#.">Thai Chicken Chilly</a></h3>
-                 <p>Enjoy Delicious Food!</p>
-               </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> --}}
-
-
 <!--Footer-->
 @include('frontend.include.footer')
 
