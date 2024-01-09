@@ -13,4 +13,11 @@ class HomeController extends Controller
     public function menu(){
         return view('frontend.customer.page.page_menu');
     }
+    public function about(){
+        return view('frontend.customer.page.page_about');
+    }
+    public function contact(){
+        return view('frontend.customer.page.page_contact');
+    }
 }
+

@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/font-awesome.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/JKS-icons.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/settings.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/bistro-icons.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/owl.carousel.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/owl.transitions.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/jquery.fancybox.css') }}">
@@ -28,16 +29,13 @@
 
 <!--Loader-->
     @include('frontend.include.loader')
-
+    @yield('menu')
 <!--Header-->
-    @include('frontend.include.header')
+
 
 
 <!--Footer-->
 @include('frontend.include.footer')
-
-<a href="#" id="back-top"><i class="fa fa-angle-up fa-2x"></i></a>
-
 <script src="{{ asset('frontend/js/jquery-2.2.3.js') }}" type="text/javascript"></script>
 <script src="{{ asset('frontend/js/bootstrap.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('frontend/js/jquery.parallax-1.1.3.js') }}"></script>

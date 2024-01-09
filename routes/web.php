@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 Route::get('/menu',[App\Http\Controllers\HomeController::class, 'menu'])->name('menu');
-
+Route::get('/tentangkami',[App\Http\Controllers\HomeController::class, 'about'])->name('about');
+Route::get('/kontak',[App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('admin/dashboard', [\App\Http\Controllers\Admin\DashboardController::class,'index']);

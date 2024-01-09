@@ -32,8 +32,8 @@
                   <li><a href="{{ route('menu') }}">Menu</a></li>
                   
                   
-                      <li><a href="#">Tentang Kami</a></li>
-                      <li><a href="#">Kontak</a></li>
+                      <li><a href="{{ route('about') }}">Tentang Kami</a></li>
+                      <li><a href="{{ route('contact') }}">Kontak</a></li>
                     
                   <li><a href="#">Login</a></li>
                   

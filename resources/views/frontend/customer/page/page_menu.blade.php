@@ -1,18 +1,15 @@
 @extends('frontend.customer.layouts.menu')
 @section('menu')
-<!doctype html>
-<html lang="en">
-<body>
-@yield('menu')
 
+@include('frontend.include.header')
 <!--Page header & Title-->
 <section id="page_header">
   <div class="page_title">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-           <h2 class="title">Our Food</h2>
-           <p>Check out our menu and some of our special, featured recipies!</p>
+           <h2 class="title">Menu</h2>
+           <p>Nikmati kemudahan dalam memesan makanan </p>
         </div>
       </div>
     </div>
@@ -35,7 +32,7 @@
               <div id="our-cheffs" class="owl-carousel">
                 <div class="item">
                   <div class="cheffs_wrap">
-                   <img src="{{ asset('frontend/images/our-cheffs1.jpg') }}" alt="Kitchen Staff">
+                   <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Kitchen Staff">
                    <h3>Stafeny Rose</h3>
                    <small>Head Of Kitchen</small>
                    <p>Enjoy Delicious Food!</p>
@@ -43,7 +40,7 @@
                 </div>
                 <div class="item">
                   <div class="cheffs_wrap">
-                   <img src="{{ asset('frontend/images/our-cheffs2.jpg') }}" alt="Kitchen Staff">
+                   <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Kitchen Staff">
                    <h3>Michael Reubens</h3>
                    <small>Food Supervisor</small>
                    <p>Enjoy Delicious Food!</p>
@@ -51,7 +48,7 @@
                 </div>
                 <div class="item">
                   <div class="cheffs_wrap">
-                   <img src="{{ asset('frontend/images/our-cheffs3.jpg') }}" alt="Kitchen Staff">
+                   <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Kitchen Staff">
                    <h3>Angle Maria</h3>
                    <small>Head Cook</small>
                    <p>Enjoy Delicious Food!</p>
@@ -59,7 +56,7 @@
                 </div>
                 <div class="item">
                   <div class="cheffs_wrap">
-                   <img src="{{ asset('frontend/images/our-cheffs1.jpg') }}" alt="Kitchen Staff">
+                   <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Kitchen Staff">
                    <h3>Stafeny Rose</h3>
                    <small>Food Supervisor</small>
                    <p>Enjoy Delicious Food!</p>
@@ -124,6 +121,6 @@
         </div>
       </div>
     </section>
-  
-</body>
-</html>
+@endsection
+
+
