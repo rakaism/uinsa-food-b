@@ -34,7 +34,9 @@ Route::middleware(['guest'])->group(function(){
 Route::middleware(['auth'])->group(function(){
     Route::redirect('/home', '/user');
     Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('userAkses:admin');
-    Route::get('/data_pengguna', [AdminController::class, 'data_pengguna'])->name('data_pengguna')->middleware('userAkses:admin');
+    Route::get('/datapengguna', [AdminController::class, 'data_pengguna'])->name('datapengguna')->middleware('userAkses:admin');
+    Route::get('/datakategori', [AdminController::class, ' data_kategori'])->name('datakategori')->middleware('userAkses:admin');
+    Route::get('/datavendor', [AdminController::class, 'data_vendor'])->name('datavendor')->middleware('userAkses:admin');
     Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('userAkses:user');
     Route::get('/user/order', [UserController::class, 'order_page'])->name('order_page')->middleware('userAkses:user');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

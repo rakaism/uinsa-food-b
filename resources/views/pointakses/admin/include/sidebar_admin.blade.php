@@ -157,7 +157,7 @@
                        </a>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
-                               <a href="{{ route('data_pengguna') }}" class="nav-link">
+                               <a href="{{ route('datapengguna') }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"></i>
                                    <p>Pengguna</p>
                                </a>
@@ -192,15 +192,15 @@
                        </a>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
-                               <a href="pages/tables/simple.html" class="nav-link">
+                               <a href="{{ route('datavendor') }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"></i>
-                                   <p>Simple Tables</p>
+                                   <p>Data Vendor</p>
                                </a>
                            </li>
                            <li class="nav-item">
-                               <a href="pages/tables/data.html" class="nav-link">
+                               <a href="{{ route('datakategori') }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"></i>
-                                   <p>DataTables</p>
+                                   <p>Data Kategori</p>
                                </a>
                            </li>
                            <li class="nav-item">
