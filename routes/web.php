@@ -35,7 +35,6 @@ Route::middleware(['guest'])->group(function(){
 Route::middleware(['auth'])->group(function(){
     Route::redirect('/home', '/user');
     Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('userAkses:admin');
-<<<<<<< HEAD
 
     Route::get('/menu_user',[UserController::class, 'menu_user'])->name('menu_user')->middleware('userAkses:user');
     Route::get('/tentangkami_user',[UserController::class, 'about_user'])->name('about_user')->middleware('userAkses:user');
@@ -47,9 +46,6 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('/delete-cart-menu', [App\Http\Controllers\UserController::class, 'deleteMenu'])->name('delete.cart.menu')->middleware('userAkses:user');
 
     Route::get('/data_pengguna', [App\Http\Controllers\AdminController::class, 'data_pengguna'])->name('data_pengguna')->middleware('userAkses:admin');
-=======
-    Route::get('/datapengguna', [AdminController::class, 'data_pengguna'])->name('datapengguna')->middleware('userAkses:admin');
->>>>>>> e33371aac0339829471c30a947bd816f84886294
     Route::get('/datakategori', [AdminController::class, ' data_kategori'])->name('datakategori')->middleware('userAkses:admin');
     Route::get('/datavendor', [AdminController::class, 'data_vendor'])->name('datavendor')->middleware('userAkses:admin');
     Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('userAkses:user');

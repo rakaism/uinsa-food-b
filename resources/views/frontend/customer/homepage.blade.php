@@ -267,7 +267,30 @@
     <script src="{{ asset('frontend/js/jquery.appear.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.fancybox.js') }}"></script>
     <script src="{{ asset('frontend/js/functions.js') }}" type="text/javascript"></script>
+    <script>
+        function toggleSearch() {
+    var searchInput = document.getElementById('searchInput');
+    var searchIcon = document.querySelector('.search-icon i');
 
+    if (searchInput.style.width === '0px' || searchInput.style.width === '') {
+        // Munculkan input dan ubah lebar menjadi misalnya 150px
+        searchInput.style.width = '150px';
+        searchInput.focus(); // Fokuskan ke input setelah muncul
+    } else {
+        // Sembunyikan input dan kembalikan lebar menjadi 0
+        searchInput.style.width = '0';
+    }
+}
+
+function hideSearch() {
+    var searchInput = document.getElementById('searchInput');
+    if (searchInput.value === '') {
+        // Sembunyikan input jika nilai kosong
+        searchInput.style.width = '0';
+    }
+}
+
+    </script>
 
 </body>
 
