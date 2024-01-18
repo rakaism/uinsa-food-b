@@ -381,27 +381,6 @@ hr{
 }
 
 /* wigdet */
-.search-box {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.search-input {
-  padding: 3px 5px;
-  border: none;
-  border-radius: 5px;
-  transition: width 0.3s, background-color 0.3s;
-  width: 0;
-  background-color: transparent;
-  margin-left: 20px;
-  font-size: 13px;
-}
-
-.search-icon {
-  cursor: pointer;
-}
-
 ul.menu_widget{ margin-bottom:15px; }
 ul.menu_widget li{ 
 	font-size:16px;

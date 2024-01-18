@@ -54,11 +54,7 @@
     <!-- Main Sidebar Container -->
 
     @yield('content')
-  
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
-      <h1>121212</h1>
-    </div>
+
       <div class="tab-content">
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

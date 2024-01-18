@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Menu;
 use App\Models\User;
 use App\Models\vendor;
 use Illuminate\Http\Request;
@@ -13,22 +14,10 @@ class AdminController extends Controller
         return view('pointakses/admin/index');
     }
 
-    public function data_pengguna() {
-        $users = User::all();
-
-        return view('pointakses/admin/data_pengguna', compact('users'));
-    }
-
-    function data_vendor() {
-        $vendors = Vendor::all();
-
-        return view('pointakses/admin/vendor', compact('vendors'));
-    }
-
     function data_kategori() {
-        $categories = category::all();
+        $categories = Category::all();
 
-        return view('pointakses/admin/kategori', compact('categories'));
+        return view('pointakses/admin/data_kategori/tampilkan_data', compact('categories'));
     }
 
 }

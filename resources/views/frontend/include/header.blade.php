@@ -52,12 +52,6 @@
                                 <li><a href="{{ route('contact') }}">Kontak</a></li>
                                 <li><a href="{{ route('auth') }}">Login</a></li>
                                 @endguest
-                                <li class="search-box" onclick="toggleSearch()">
-                                    <a href="#" class="search-icon">
-                                      <i class="icon-search"></i>
-                                      <input type="text" class="search-input" id="searchInput" placeholder="Search..." onblur="hideSearch()">
-                                    </a>
-                                  </li>
                             </ul>
                         </div>
                     </nav>

@@ -24,11 +24,6 @@ class Menu extends Model
         'menu_desc'
     ];
 
-    static function menu_list(){
-        $data = Menu::all();
-        return $data;
-    }
-
     static function add_menu($menu_pic,$menu_name,$menu_price,$menu_desc){
         Menu::create([
             "menu_pic" => $menu_pic,
