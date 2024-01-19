@@ -2,22 +2,20 @@
 
 @section('content')
 <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
-<h1>Tambah Pengguna</h1>
-    <form action="{{ route('vendors') }}" method="POST">
+<h1>Tambah Menu</h1>
+    <form action="{{ route('menus') }}" method="POST">
         @csrf
-        <label for="vendor_name">Nama Vendor:</label>
-        <input type="text" name="vendor_name" id="vendor_name">
+        <label for="menu_pic">Gambar Menu</label>
+        <input type="file" class="form-control @error('image') is-invalid @enderror" name="image" >
         <br>
-        <label for="vendor_adress">Alamat:</label>
-        <input type="text" name="vendor_adress" id="vendor_adress">
+        <label for="menu_name">Nama Menu: </label>
+        <input type="text" name="menu_name" id="menu_name">
         <br>
-        <label for="vendor_phone_num">No Telepon:</label>
-        <input type="text" name="vendor_phone_num" id="vendor_phone_num">
-        <br>
+        
         <button type="submit">Simpan</button>
     </form>
 
-    <a href="{{ route('datavendor') }}">Kembali ke Daftar Vendor</a>
+    <a href="{{ route('datamenu') }}">Kembali ke Daftar Menu</a>
 </div>
 
 @include('pointakses.admin.include.sidebar_admin')>

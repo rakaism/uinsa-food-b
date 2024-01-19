@@ -39,26 +39,37 @@ Route::middleware(['guest'])->group(function(){
 
 Route::middleware(['auth'])->group(function(){
     Route::redirect('/home', '/user');
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('userAkses:admin');
-
+    
     Route::get('/menu_user',[UserController::class, 'menu_user'])->name('menu_user')->middleware('userAkses:user');
     Route::get('/tentangkami_user',[UserController::class, 'about_user'])->name('about_user')->middleware('userAkses:user');
     Route::get('/kontak_user',[UserController::class, 'contact_user'])->name('contact_user')->middleware('userAkses:user');
-
-    Route::get('/shopping-cart', [App\Http\Controllers\UserController::class, 'menuOrder'])->name('shopping.order')->middleware('userAkses:user');
-    Route::get('/menu/{id}', [App\Http\Controllers\UserController::class, 'addMenutoOrder'])->name('addMenu.to.order')->middleware('userAkses:user');
-    Route::patch('/update-shopping-cart', [App\Http\Controllers\UserController::class, 'updateOrder'])->name('update.sopping.order')->middleware('userAkses:user');
-    Route::delete('/delete-cart-menu', [App\Http\Controllers\UserController::class, 'deleteMenu'])->name('delete.cart.menu')->middleware('userAkses:user');
-
-    Route::get('/datakategori', [AdminController::class, 'data_kategori'])->name('datakategori')->middleware('userAkses:admin');
+    
+    Route::get('/shopping-cart', [UserController::class, 'menuOrder'])->name('shopping.order')->middleware('userAkses:user');
+    Route::get('/menu/{id}', [UserController::class, 'addMenutoOrder'])->name('addMenu.to.order')->middleware('userAkses:user');
+    Route::patch('/update-shopping-cart', [UserController::class, 'updateOrder'])->name('update.sopping.order')->middleware('userAkses:user');
+    Route::delete('/delete-cart-menu', [UserController::class, 'deleteMenu'])->name('delete.cart.menu')->middleware('userAkses:user');
+    
     Route::get('/user', [UserController::class, 'index'])->name('user')->middleware('userAkses:user');
     Route::get('/user/order', [UserController::class, 'order_page'])->name('order_page')->middleware('userAkses:user');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     
-    Route::get('/datamenu', [MenuController::class, 'data_menu'])->name('datamenu')->middleware('userAkses:admin');
+    ////////// Admin Controller //////////
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('userAkses:admin');
+
+    ////////// Admin Kategori Controller //////////
+    Route::get('/datakategori', [AdminController::class, 'data_kategori'])->name('datakategori')->middleware('userAkses:admin');
     
+    ////////// Admin Pengguna Controller //////////
     Route::get('/data_pengguna',[CustomerController::class, 'data_pengguna'])->name('data_pengguna')->middleware('userAkses:admin');
+
+    ////////// Admin Menu Controller //////////
+    Route::get('/datamenu', [MenuController::class, 'data_menu'])->name('datamenu')->middleware('userAkses:admin');
+    Route::get('/createmenu', [MenuController::class, 'create_menu'])->name('createmenu')->middleware('userAkses:admin');
+    Route::post('/menus', [MenuController::class, 'store_menu'])->name('menus')->middleware('userAkses:admin');
+    Route::get('datamenu/{id}/editmenu', [MenuController::class, 'edit_menu'])->name('editmenu')->middleware('userAkses:admin');
+    Route::put('{id}/updatemenu', [MenuController::class, 'menu_update'])->name('updatemenu')->middleware('userAkses:admin');
     
+    ////////// Admin Vendor Controller //////////
     Route::get('/datavendor', [VendorController::class, 'data_vendor'])->name('datavendor')->middleware('userAkses:admin');
     Route::get('/createvendor', [VendorController::class, 'create_vendor'])->name('createvendor')->middleware('userAkses:admin');
     Route::post('/vendors', [VendorController::class, 'store_vendor'])->name('vendors')->middleware('userAkses:admin');

@@ -16,7 +16,7 @@ class VendorController extends Controller
         return view('pointakses/admin/data_vendor/tampilkan_vendor', compact('vendors'));
     }
 
-     function create_vendor()
+    function create_vendor()
     {
         return view('pointakses/admin/data_vendor/create');
     }

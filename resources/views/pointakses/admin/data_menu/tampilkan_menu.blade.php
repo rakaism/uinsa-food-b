@@ -5,37 +5,66 @@
 
 
 <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
-    <style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-    }
-</style>
-
-  <table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Gambar Menu</th>
-            <th>Kategori</th>
-            <th>Vendor</th>
-            <th>Nama Menu</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($menus as $menu)
-        <tr>
-            <td></td>
-        </tr>
-        @endforeach
-    </tbody>
-</table>
-</div>
-@include('pointakses.admin.include.sidebar_admin')>
-
+<a href="{{ route('createmenu') }}" class="btn btn-success">Tambah Menu</a>
+    <div class="content">
+    <div class="col-12 mt-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">DATA MENU</h3>
+    
+            <div class="card-tools">
+              <div class="input-group input-group-sm" style="width: 150px;">
+                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+    
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-default">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Gambar Menu</th>
+                    <th>Nama Menu</th>
+                    <th>Kategori</th>
+                    <th>Vendor</th>
+                    <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($menus as $menu)
+                <tr>
+                    <td>{{ $menu->id}}</td>
+                    <td class="text-center">
+                        <img src="{{ asset('/public/menu_images/'.$menu->menu_pic) }}" class="rounded" style="width: 150px">
+                    </td>
+                    <td>{{ $menu->menu_name }}</td>
+                    <td>
+                    @if ($menu->category)
+                        {{ $menu->category->category_name }}
+                    @else
+                        No Category
+                    @endif
+                    </td>
+                    <td>{{ $menu->vendor_id }}</td>
+                    <td><a href="/menu/{{ $menu->id }}/delete" class="btn btn-danger" onclick="return confirm('Apakah yakin dihapus? {{ $menu->menu_name }}');">Hapus</a></td>
+                    <td><a href="{{ route('editmenu', $menu->id) }}" class="btn btn-info">Edit</a></td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+    </div>
+    </div>
+    @include('pointakses.admin.include.sidebar_admin')>
 @endsection

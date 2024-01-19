@@ -17,7 +17,7 @@ class Category extends Model
     protected $primaryKey = 'category_id';
 
     protected $fillable = [
-        'category_name',
+        'id', 'category_name',
     ];
 
     public function menu()
