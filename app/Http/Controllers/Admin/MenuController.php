@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
+use App\Models\Category;
+use App\Models\Vendor;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
@@ -18,13 +20,16 @@ class MenuController extends Controller
 
     function create_menu()
     {
-        return view('pointakses/admin/data_menu/create');
+        $categories = Category::all();
+        $vendors = Vendor::all();
+
+        return view('pointakses/admin/data_menu/create', compact('categories', 'vendors'));
     }
 
      function store_menu(Request $request)
     {
         $this->validate($request, [
-            'image'     => 'required|image|mimes:jpeg,jpg,png|max:2048'
+            'image'     => 'required|image|mimes:jpeg,jpg,png'
         ]);
         
         $menu = new Menu();
@@ -32,13 +37,13 @@ class MenuController extends Controller
         $menu->storeAs('public/menu_images', $image->hashName());
 
         $menu->menu_name = $request->input('menu_name');
-        $vendor->save();
+        $menu->save();
 
-        return redirect()->route('datavendor');
+        return redirect()->route('datamenu');
     }
 
     
-    function edit_vendor( string $id): View
+    function edit_menu( string $id): View
     {
         $menus = Menu::findOrFail($id);
 
@@ -46,7 +51,7 @@ class MenuController extends Controller
     }
 
     
-    function vendor_update(Request $request, $id)
+    function menu_update(Request $request, $id)
     {
         $menus = Menu::find($id);
         $menus->menu_name = $request->input('menu_name');

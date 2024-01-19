@@ -52,7 +52,13 @@
                         No Category
                     @endif
                     </td>
-                    <td>{{ $menu->vendor_id }}</td>
+                    <td>
+                    @if ($menu->vendor)
+                        {{ $menu->vendor->vendor_name }}
+                    @else
+                        No Vendor
+                    @endif
+                    </td>
                     <td><a href="/menu/{{ $menu->id }}/delete" class="btn btn-danger" onclick="return confirm('Apakah yakin dihapus? {{ $menu->menu_name }}');">Hapus</a></td>
                     <td><a href="{{ route('editmenu', $menu->id) }}" class="btn btn-info">Edit</a></td>
                 </tr>

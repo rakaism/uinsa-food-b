@@ -6,12 +6,33 @@
     <form action="{{ route('menus') }}" method="POST">
         @csrf
         <label for="menu_pic">Gambar Menu</label>
-        <input type="file" class="form-control @error('image') is-invalid @enderror" name="image" >
+        <input type="file" class="form-control @error('image') is-invalid @enderror" name="menu_pic">
         <br>
         <label for="menu_name">Nama Menu: </label>
         <input type="text" name="menu_name" id="menu_name">
         <br>
-        
+        <select name="category" id="category">
+            <option value="">Select Category</option>
+
+            @if($categories && count($categories) > 0)
+                @foreach($categories as $category)
+                    <option value="{{ $category['id'] }}">{{ $category->category_name }}</option>
+                @endforeach
+            @endif
+        </select>
+        <br>
+        <br>
+        <select name="vendor" id="vendor">
+            <option value="">Select Vendor</option>
+
+            @if($vendors && count($vendors) > 0)
+                @foreach($vendors as $vendor)
+                    <option value="{{ $vendor['id'] }}">{{ $vendor->vendor_name }}</option>
+                @endforeach
+            @endif
+        </select>
+        <br>
+        <br>
         <button type="submit">Simpan</button>
     </form>
 

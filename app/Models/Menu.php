@@ -24,24 +24,14 @@ class Menu extends Model
         'menu_desc'
     ];
 
-    static function add_menu($menu_pic,$menu_name,$menu_price,$menu_desc){
-        Menu::create([
-            "menu_pic" => $menu_pic,
-            "menu_name" => $menu_name,
-            "menu_price" => $menu_price,
-            "menu_desc" => $menu_desc
-        ]);
+    public function category()
+    {
+        return $this -> belongsTo(Category::class);
     }
-
 
     public function user()
     {
         return $this -> hasMany(User::class);
-    }
-
-    public function category()
-    {
-        return $this -> belongsTo(Category::class);
     }
 
     public function order()
@@ -51,6 +41,6 @@ class Menu extends Model
 
     public function vendor()
     {
-        return $this -> belongsTo(Menu::class);
+        return $this -> belongsTo(Vendor::class);
     }
 }
