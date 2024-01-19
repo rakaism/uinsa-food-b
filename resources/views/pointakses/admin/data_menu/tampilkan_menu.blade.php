@@ -32,6 +32,7 @@
                     <th>ID</th>
                     <th>Gambar Menu</th>
                     <th>Nama Menu</th>
+                    <th>Harga Menu</th>
                     <th>Kategori</th>
                     <th>Vendor</th>
                     <th>Aksi</th>
@@ -42,9 +43,10 @@
                 <tr>
                     <td>{{ $menu->id}}</td>
                     <td class="text-center">
-                        <img src="{{ asset('/public/menu_images/'.$menu->menu_pic) }}" class="rounded" style="width: 150px">
+                        <img src="{{ asset('/storage/menu_images/'.$menu->menu_pic) }}" class="rounded" style="width: 150px">
                     </td>
                     <td>{{ $menu->menu_name }}</td>
+                    <td>{{ $menu->menu_price }}</td>
                     <td>
                     @if ($menu->category)
                         {{ $menu->category->category_name }}

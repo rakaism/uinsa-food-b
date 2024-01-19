@@ -7,6 +7,7 @@ use App\Models\Menu;
 use App\Models\Category;
 use App\Models\Vendor;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -26,20 +27,27 @@ class MenuController extends Controller
         return view('pointakses/admin/data_menu/create', compact('categories', 'vendors'));
     }
 
-     function store_menu(Request $request)
+     function store_menu(Request $request): RedirectResponse
     {
         $this->validate($request, [
-            'image'     => 'required|image|mimes:jpeg,jpg,png'
+            'menu_pic'     => 'required|image|mimes:jpeg,jpg,png'
         ]);
         
         $menu = new Menu();
-        $menu = $request->file('image');
-        $menu->storeAs('public/menu_images', $image->hashName());
-
+        if ($request->hasFile('menu_pic')) {
+            $image = $request->file('menu_pic');
+            $imagePath = $image->storeAs('public/menu_images', $image->hashName());
+            $menu->menu_pic = $imagePath;
+        }
+        
         $menu->menu_name = $request->input('menu_name');
+        $menu->menu_price = $request->input('menu_price');
+        $menu->category_id = $request->input('category');
+        $menu->vendor_id = $request->input('vendor');
+        $menu->menu_desc = $request->input('menu_desc');
         $menu->save();
 
-        return redirect()->route('datamenu');
+        return redirect()->route('datamenu')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
     

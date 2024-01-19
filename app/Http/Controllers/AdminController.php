@@ -13,11 +13,4 @@ class AdminController extends Controller
     function index() {
         return view('pointakses/admin/index');
     }
-
-    function data_kategori() {
-        $categories = Category::all();
-
-        return view('pointakses/admin/data_kategori/tampilkan_data', compact('categories'));
-    }
-
 }
