@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="{{ asset('backend/plugins/summernote/summernote-bs4.min.css') }}">
 
   <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/bistro-icons.css') }}">
+  
 </head>
 <body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
   <div class="wrapper">
