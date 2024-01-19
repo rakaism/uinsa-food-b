@@ -29,6 +29,7 @@ Route::middleware(['guest'])->group(function(){
     Route::get('/menu',[App\Http\Controllers\HomeController::class, 'menu'])->name('menu');
     Route::get('/tentangkami',[App\Http\Controllers\HomeController::class, 'about'])->name('about');
     Route::get('/kontak',[App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+    Route::get('/menu',[HomeController::class, 'filterMenu'])->name('menu');
 
     Route::get('/login', [App\Http\Controllers\AuthController::class, 'index'])->name('auth');
     Route::post('/login', [App\Http\Controllers\AuthController::class, 'login']);
@@ -44,6 +45,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/menu_user',[UserController::class, 'menu_user'])->name('menu_user')->middleware('userAkses:user');
     Route::get('/tentangkami_user',[UserController::class, 'about_user'])->name('about_user')->middleware('userAkses:user');
     Route::get('/kontak_user',[UserController::class, 'contact_user'])->name('contact_user')->middleware('userAkses:user');
+    Route::get('/menu_user',[UserController::class, 'filterMenu_user'])->name('menu_user')->middleware('userAkses:user');
 
     Route::get('/shopping-cart', [App\Http\Controllers\UserController::class, 'menuOrder'])->name('shopping.order')->middleware('userAkses:user');
     Route::get('/menu/{id}', [App\Http\Controllers\UserController::class, 'addMenutoOrder'])->name('addMenu.to.order')->middleware('userAkses:user');

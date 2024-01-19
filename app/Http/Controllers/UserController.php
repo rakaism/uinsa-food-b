@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Menu;
 
+use App\Models\Category;
+
 class UserController extends Controller
 {
     public function index() {
@@ -27,6 +29,20 @@ class UserController extends Controller
 
         return view('pointakses/user/page_menu', compact('menus'));
     }
+
+    public function filterMenu_user(Request $request){
+        $query = Menu::query();
+        $categories = Category::all();
+
+        if($request->ajax()){
+            $menus = $query->where(['category_id'=>$request->category])->get();
+            return response() -> json(['menus'=>$menus]);
+        }
+        $menus = $query->get();
+
+        return view ('pointakses/user/page_menu', compact('categories', 'menus'));
+    }
+
     public function about_user(){
         return view('pointakses/user/page_about');
     }
