@@ -31,8 +31,8 @@
                 <tr>
                     <th>ID</th>
                     <th>Nama Vendor</th>
-                    <th>No Telepon</th>
                     <th>Alamat</th>
+                    <th>No. Tlp</th>
                     <th>Aksi</th>
                 </tr>
               </thead>
