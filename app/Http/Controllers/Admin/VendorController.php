@@ -51,4 +51,11 @@ class VendorController extends Controller
 
         return redirect()->route('datavendor')-> with('Berhasil', 'Vendor berhasil diupdate.');;
     }
+    public function vendor_delete($id)
+    {
+        $vendors = Vendor::find($id);
+        $vendors->delete();
+    
+        return redirect()->back();
+    }
 }

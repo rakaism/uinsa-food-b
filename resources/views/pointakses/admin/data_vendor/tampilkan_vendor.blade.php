@@ -43,7 +43,13 @@
                     <td>{{ $vendor->vendor_name }}</td>
                     <td>{{ $vendor->vendor_adress }}</td>
                     <td>{{ $vendor->vendor_phone_num }}</td>
-                    <td><a href="/vendor/{{ $vendor->id }}/delete" class="btn btn-danger" onclick="return confirm('Apakah yakin dihapus? {{ $vendor->vendor_name }}');">Hapus</a></td>
+                    <td>
+                      <a href="{{ route('deletevendor', ['id' => $vendor->id]) }}"
+                          class="btn btn-danger"
+                          onclick="return confirm('Apakah yakin dihapus? {{ $vendor->vendor_name }}');">
+                          Hapus
+                      </a>
+                  </td>
                     <td><a href="{{ route('editvendor', $vendor->id) }}" class="btn btn-info">Edit</a></td>
                 </tr>
                 @endforeach

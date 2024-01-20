@@ -76,8 +76,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/categories', [CategoryController::class, 'store_category'])->name('categories')->middleware('userAkses:admin');
     Route::get('datakategori/{id}/editcategory', [CategoryController::class, 'edit_category'])->name('editcategory')->middleware('userAkses:admin');
     Route::put('{id}/updatecategory', [CategoryController::class, 'category_update'])->name('updatecategory')->middleware('userAkses:admin');
-    
-
+    Route::get('datakategori/{id}/deletecategory', [CategoryController::class, 'category_delete'])->name('deletecategory')->middleware('userAkses:admin');
     ////////// Admin Pengguna Controller //////////
     Route::get('/data_pengguna',[CustomerController::class, 'data_pengguna'])->name('data_pengguna')->middleware('userAkses:admin');
 
@@ -96,4 +95,5 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/vendors', [VendorController::class, 'store_vendor'])->name('vendors')->middleware('userAkses:admin');
     Route::get('datavendor/{id}/editvendor', [VendorController::class, 'edit_vendor'])->name('editvendor')->middleware('userAkses:admin');
     Route::put('{id}/updatevendor', [VendorController::class, 'vendor_update'])->name('updatevendor')->middleware('userAkses:admin');
+    Route::get('datavendor/{id}/deletevendor', [VendorController::class, 'vendor_delete'])->name('deletevendor')->middleware('userAkses:admin');
 });

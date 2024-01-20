@@ -41,9 +41,17 @@ class CategoryController extends Controller
     function category_update(Request $request, $id)
     {
         $categories = Category::find($id);
-        $categories->vendor_name = $request->input('vendor_name');
+        $categories->category_name = $request->input('category_name'); // Perbaikan disini
         $categories->save();
-
-        return redirect()->route('datakategori')-> with('Berhasil', 'Kategori berhasil diupdate.');;
+    
+        return redirect()->route('datakategori')->with('Berhasil', 'Kategori berhasil diupdate.');
     }
+    public function category_delete($id)
+    {
+        $category = Category::find($id);
+        $category->delete();
+    
+        return redirect()->back();
+    }
+    
 }

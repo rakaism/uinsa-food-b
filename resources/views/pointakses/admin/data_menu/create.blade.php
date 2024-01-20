@@ -46,6 +46,42 @@
     <a href="{{ route('datamenu') }}">Kembali ke Daftar Menu</a>
 </div>
 
+
+<div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">Quick Example</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form action="{{ route('menus') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Tambah Menu</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="menu_pic">File input</label>
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input @error('menu_pic') is-invalid @enderror" id="menu_pic">
+              <label class="custom-file-label" for="menu_pic">Choose file</label>
+            </div>
+            <div class="input-group-append">
+              <span class="input-group-text">Upload</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-body -->
+
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+
 @include('pointakses.admin.include.sidebar_admin')>
 
 @endsection
