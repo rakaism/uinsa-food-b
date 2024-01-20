@@ -87,6 +87,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/menus', [MenuController::class, 'store_menu'])->name('menus')->middleware('userAkses:admin');
     Route::get('datamenu/{id}/editmenu', [MenuController::class, 'edit_menu'])->name('editmenu')->middleware('userAkses:admin');
     Route::put('{id}/updatemenu', [MenuController::class, 'menu_update'])->name('updatemenu')->middleware('userAkses:admin');
+    Route::get('datamenu/{id}/deletemenu', [MenuController::class, 'menu_delete'])->name('deletemenu')->middleware('userAkses:admin');
     
 
     ////////// Admin Vendor Controller //////////

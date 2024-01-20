@@ -67,4 +67,11 @@ class MenuController extends Controller
 
         return redirect()->route('datamenu')-> with('Berhasil', 'Menu berhasil diupdate.');;
     }
+    public function menu_delete($id)
+    {
+        $menus = menu::find($id);
+        $menus->delete();
+    
+        return redirect()->back();
+    }
 }
