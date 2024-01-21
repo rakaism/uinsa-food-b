@@ -32,15 +32,15 @@
         </div>
         <div class="form-group">
             <label for="vendor_adress">alamat</label>
-            <input type="vendor_adress" class="form-control" id="vendor_adress" value="{{ $vendors->vendor_adress }}" name="vendor_adress">
+            <input type="vendor_adress" class="form-control" id="vendor_adress" value="{{ $vendors->vendor_address }}" name="vendor_adress">
           </div>
 
       <!-- /.card-body -->
 
       <div class="card-footer">
         <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{ route('datavendor') }}" class="btn btn-primary">Kembali ke Daftar Pengguna</a>
       </div>
-      <a href="{{ route('datavendor') }}">Kembali ke Daftar Pengguna</a>
     </form>
   </div>
 

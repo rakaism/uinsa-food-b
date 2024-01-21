@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('vendor_name');
             $table->integer('vendor_phone_num');
-            $table->string('vendor_adress');
+            $table->string('vendor_address');
             $table->timestamps();
         });
     }

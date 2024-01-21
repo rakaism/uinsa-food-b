@@ -41,7 +41,7 @@
                 <tr>
                     <td>{{ $vendor->id}}</td>
                     <td>{{ $vendor->vendor_name }}</td>
-                    <td>{{ $vendor->vendor_adress }}</td>
+                    <td>{{ $vendor->vendor_address }}</td>
                     <td>{{ $vendor->vendor_phone_num }}</td>
                     <td>
                       <a href="{{ route('deletevendor', ['id' => $vendor->id]) }}"

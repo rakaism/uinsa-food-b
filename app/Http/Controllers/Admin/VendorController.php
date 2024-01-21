@@ -43,14 +43,22 @@ class VendorController extends Controller
     
     function vendor_update(Request $request, $id)
     {
+        $request->validate([
+            'vendor_name' => 'required',
+            'vendor_address' => 'required',
+            'vendor_phone_num' => 'required|numeric', // Change to 'required|string' if using VARCHAR
+        ]);
+    
         $vendors = Vendor::find($id);
         $vendors->vendor_name = $request->input('vendor_name');
-        $vendors->vendor_adress = $request->input('vendor_adress');
+        $vendors->vendor_address = $request->input('vendor_adress');
         $vendors->vendor_phone_num = $request->input('vendor_phone_num');
         $vendors->save();
-
-        return redirect()->route('datavendor')-> with('Berhasil', 'Vendor berhasil diupdate.');;
+    
+        return redirect()->route('datavendor')->with('Berhasil', 'Vendor berhasil diupdate.');
     }
+    
+    
     public function vendor_delete($id)
     {
         $vendors = Vendor::find($id);
