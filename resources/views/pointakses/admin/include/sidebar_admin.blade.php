@@ -167,6 +167,16 @@
                        </a>
                     </span>
                    </li>
+                   <li class="nav-item">
+                    <span>
+                        <a href="#" class="nav-link">
+                           <i class="nav-icon fas fa-table"></i>
+                           <p>
+                               Tabel Order
+                           </p>
+                       </a>
+                    </span>
+                   </li>
 
 
                    <!-- Control Sidebar -->

@@ -21,7 +21,7 @@
         <div class="menu_card">
 
             <div class="menu_image">
-                <img src="{{ asset('storage/menu_images/' . $menu->menu_pic) }}">
+                <img src="{{ url('storage/menu_images/' . basename($menu->menu_pic)) }}">
             </div>
 
             <div class="small_card">
@@ -31,6 +31,12 @@
             <div class="menu_info">
                 <h2>{{ $menu->menu_name }}</h2>
                 <p>{{ $menu->menu_desc }}</p>
+                <h3>@if ($menu->vendor)
+                        {{ $menu->vendor->vendor_name }}
+                    @else
+                    No Vendor
+                    @endif
+                </h3> 
                 <h3>Rp. {{ $menu->menu_price }}</h3>
                 <div class="menu_icon">
                     <i class="icon-basket2"></i>
@@ -48,7 +54,7 @@
                 $.ajax({
                     url:"{{ route('menu' )}}",
                     type: "GET",
-                    data: {category: category},
+                    data: {'category'.category},
                     success:function(data){
                         var menus = data.menus;
                         var html = '';

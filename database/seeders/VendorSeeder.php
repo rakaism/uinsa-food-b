@@ -16,17 +16,17 @@ class VendorSeeder extends Seeder
         Vendor::create([
             'vendor_name' => 'mas roy',
             'vendor_phone_num' => '123098',
-            'vendor_adress' => 'asdasd',
+            'vendor_address' => 'asdasd',
         ]);
         Vendor::create([
             'vendor_name' => 'mbak rara',
             'vendor_phone_num' => '123098',
-            'vendor_adress' => 'asdasd',
+            'vendor_address' => 'asdasd',
         ]);
         Vendor::create([
             'vendor_name' => 'mas faiz',
             'vendor_phone_num' => '123098',
-            'vendor_adress' => 'asdasd',
+            'vendor_address' => 'asdasd',
         ]);
     }
 }
