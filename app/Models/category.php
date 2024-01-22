@@ -17,7 +17,6 @@ class Category extends Model
     protected $guarded = ['id'];
 
     protected $fillable = [
-        'id', 
         'category_name',
     ];
 

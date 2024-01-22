@@ -28,18 +28,19 @@ use App\Models\Vendor;
 Route::middleware(['guest'])->group(function(){
 
     ////////// Guest View Controller //////////
-    Route::get('/',[App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
-    Route::get('/menu',[App\Http\Controllers\HomeController::class, 'menu'])->name('menu');
-    Route::get('/tentangkami',[App\Http\Controllers\HomeController::class, 'about'])->name('about');
-    Route::get('/kontak',[App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+    Route::get('/',[HomeController::class, 'index'])->name('homepage');
+    Route::get('/menu',[HomeController::class, 'menu'])->name('menu');
+    Route::get('/tentangkami',[HomeController::class, 'about'])->name('about');
+    Route::get('/kontak',[HomeController::class, 'contact'])->name('contact');
+    Route::get('/menu',[HomeController::class, 'filterMenu'])->name('menu');
 
 
     ////////// Guest Login & Regis Controller //////////
-    Route::get('/login', [App\Http\Controllers\AuthController::class, 'index'])->name('auth');
-    Route::post('/login', [App\Http\Controllers\AuthController::class, 'login']);
-    Route::get('/reg', [App\Http\Controllers\AuthController::class, 'create'])->name('registrasi');
-    Route::post('/reg', [App\Http\Controllers\AuthController::class, 'register']);
-    Route::get('/verify/{verify_key}', [App\Http\Controllers\AuthController::class, 'verify']);
+    Route::get('/login', [AuthController::class, 'index'])->name('auth');
+    Route::post('/login', [AuthController::class, 'login']);
+    Route::get('/reg', [AuthController::class, 'create'])->name('registrasi');
+    Route::post('/reg', [AuthController::class, 'register']);
+    Route::get('/verify/{verify_key}', [AuthController::class, 'verify']);
 });
 
 Route::middleware(['auth'])->group(function(){
@@ -49,6 +50,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/menu_user',[UserController::class, 'menu_user'])->name('menu_user')->middleware('userAkses:user');
     Route::get('/tentangkami_user',[UserController::class, 'about_user'])->name('about_user')->middleware('userAkses:user');
     Route::get('/kontak_user',[UserController::class, 'contact_user'])->name('contact_user')->middleware('userAkses:user');
+    Route::get('/menu_user',[UserController::class, 'filterMenu_user'])->name('menu_user')->middleware('userAkses:user');
     
 
     ////////// User Cart Controller //////////

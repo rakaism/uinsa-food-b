@@ -15,7 +15,7 @@ return new class extends Migration
         if (!Schema::hasTable('table_menu')) {
             Schema::create('table_menu', function (Blueprint $table) {
                 $table->id();
-                $table->string('menu_pic');
+                $table->string('menu_pic')->nullable();;
                 $table->foreignId('category_id')->references('id')->on('table_category');
                 $table->foreignId('vendor_id')->references('id')->on('table_vendors');
                 $table->string('menu_name');

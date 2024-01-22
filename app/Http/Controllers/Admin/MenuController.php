@@ -27,28 +27,40 @@ class MenuController extends Controller
         return view('pointakses/admin/data_menu/create', compact('categories', 'vendors'));
     }
 
-     function store_menu(Request $request): RedirectResponse
+    function store_menu(Request $request): RedirectResponse
     {
         $this->validate($request, [
-            'menu_pic'     => 'required|image|mimes:jpeg,jpg,png'
+            'menu_pic' => 'required|image|mimes:jpeg,jpg,png'
         ]);
-        
+    
         $menu = new Menu();
-        if ($request->hasFile('menu_pic')) {
-            $image = $request->file('menu_pic');
-            $imagePath = $image->storeAs('public/menu_images', $image->hashName());
-            $menu->menu_pic = $imagePath;
-        }
-        
         $menu->menu_name = $request->input('menu_name');
         $menu->menu_price = $request->input('menu_price');
         $menu->category_id = $request->input('category');
         $menu->vendor_id = $request->input('vendor');
         $menu->menu_desc = $request->input('menu_desc');
         $menu->save();
-
+    
+        // Ambil ID makanan yang baru saja disimpan
+        $menuId = $menu->id;
+    
+        if ($request->hasFile('menu_pic')) {
+            $image = $request->file('menu_pic');
+            
+            // Ubah nama file gambar menjadi ID makanan
+            $imageName = $menuId . '.' . $image->getClientOriginalExtension();
+            
+            // Simpan gambar ke direktori storage dengan nama baru
+            $imagePath = $image->storeAs('public/menu_images/', $imageName);
+    
+            // Update path gambar pada model Menu
+            $menu->menu_pic = $imagePath;
+            $menu->save();
+        }
+    
         return redirect()->route('datamenu')->with(['success' => 'Data Berhasil Disimpan!']);
     }
+    
 
     
     function edit_menu( string $id): View
