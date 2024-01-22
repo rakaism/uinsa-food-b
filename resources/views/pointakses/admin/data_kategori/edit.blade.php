@@ -31,8 +31,8 @@
 
       <div class="card-footer">
         <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{ route('datakategori') }}" class="btn btn-primary">Kembali ke Daftar Kategori</a>
       </div>
-      <a href="{{ route('datakategori') }}">Kembali ke Daftar Pengguna</a>
     </form>
   </div>
 

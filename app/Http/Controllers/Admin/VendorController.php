@@ -26,7 +26,7 @@ class VendorController extends Controller
         $vendor = new Vendor();
         $vendor->vendor_name = $request->input('vendor_name');
         $vendor->vendor_phone_num = $request->input('vendor_phone_num');
-        $vendor->vendor_adress = $request->input('vendor_adress');
+        $vendor->vendor_address = $request->input('vendor_address');
         $vendor->save();
 
         return redirect()->route('datavendor');
@@ -46,12 +46,12 @@ class VendorController extends Controller
         $request->validate([
             'vendor_name' => 'required',
             'vendor_address' => 'required',
-            'vendor_phone_num' => 'required|numeric', // Change to 'required|string' if using VARCHAR
+            'vendor_phone_num' => 'required|string',
         ]);
     
         $vendors = Vendor::find($id);
         $vendors->vendor_name = $request->input('vendor_name');
-        $vendors->vendor_address = $request->input('vendor_adress');
+        $vendors->vendor_address = $request->input('vendor_address');
         $vendors->vendor_phone_num = $request->input('vendor_phone_num');
         $vendors->save();
     

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('table_vendors', function (Blueprint $table) {
             $table->id();
             $table->string('vendor_name');
-            $table->integer('vendor_phone_num');
+            $table->string('vendor_phone_num');
             $table->string('vendor_address');
             $table->timestamps();
         });
