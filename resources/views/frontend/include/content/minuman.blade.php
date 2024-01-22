@@ -23,8 +23,8 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
-                                        <small>Food Supervisor</small>
+                                        <h2>Ayam Goreng</h2>
+                                        <small>Makanan</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
                                     </div>
@@ -45,8 +45,8 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
-                                        <small>Food Supervisor</small>
+                                        <h2>Ayam Goreng</h2>
+                                        <small>Makanan</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
                                     </div>
@@ -67,8 +67,8 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
-                                        <small>Food Supervisor</small>
+                                        <h2>Ayam Goreng</h2>
+                                        <small>Makanan</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
                                     </div>
@@ -89,8 +89,8 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
-                                        <small>Food Supervisor</small>
+                                        <h2>Ayam Goreng</h2>
+                                        <small>Makanan</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
                                     </div>
@@ -111,8 +111,8 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
-                                        <small>Food Supervisor</small>
+                                        <h2>Ayam Goreng</h2>
+                                        <small>Makanan</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
                                     </div>

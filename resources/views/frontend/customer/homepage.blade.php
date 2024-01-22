@@ -211,24 +211,24 @@
                     data-wow-delay="300ms">
                     <div class="counters-item row">
                         <i class="icon-smile"></i>
-                        <h2><strong data-to="4680">0</strong></h2>
-                        <p>Happy Customers</p>
+                        <h2><strong data-to="120">0</strong></h2>
+                        <p>Pelanggan</p>
                     </div>
                 </div>
                 <div class="col-sm-3 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms"
                     data-wow-delay="600ms">
                     <div class="counters-item  row">
                         <i class="icon-food"></i>
-                        <h2><strong data-to="865">0</strong></h2>
-                        <p>Dishes Served</p>
+                        <h2><strong data-to="150">0</strong></h2>
+                        <p>Order</p>
                     </div>
                 </div>
                 <div class="col-sm-3 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms"
                     data-wow-delay="900ms">
                     <div class="counters-item  row">
                         <i class="icon-glass"></i>
-                        <h2><strong data-to="510">0</strong></h2>
-                        <p>Total Beverages</p>
+                        <h2><strong data-to="56">0</strong></h2>
+                        <p>Menu</p>
                     </div>
                 </div>
                 <div class="col-sm-3 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms"

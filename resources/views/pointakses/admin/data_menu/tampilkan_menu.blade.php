@@ -42,7 +42,7 @@
                                     <tr>
                                         <td>{{ $menu->id }}</td>
                                         <td class="text-center">
-                                            <img src="{{ asset('storage/menu_images/' . $menu->menu_pic) }}" class="rounded" style="width: 150px">
+                                            <img src="{{ asset('storage/menu_images/'.$menu->menu_pic) }}" class="rounded" style="width: 150px">
                                         </td>
                                         <td>{{ $menu->menu_name }}</td>
                                         <td>{{ $menu->menu_price }}</td>

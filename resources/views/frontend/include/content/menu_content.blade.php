@@ -21,7 +21,7 @@
         <div class="menu_card">
 
             <div class="menu_image">
-                <img src="{{ asset('frontend/images/ayam_bakar_1.png') }}">
+                <img src="{{ asset('storage/menu_images/' . $menu->menu_pic) }}">
             </div>
 
             <div class="small_card">
@@ -48,7 +48,7 @@
                 $.ajax({
                     url:"{{ route('menu' )}}",
                     type: "GET",
-                    data: {'category'.category},
+                    data: {category: category},
                     success:function(data){
                         var menus = data.menus;
                         var html = '';

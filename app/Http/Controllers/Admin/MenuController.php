@@ -36,7 +36,7 @@ class MenuController extends Controller
         $menu = new Menu();
         if ($request->hasFile('menu_pic')) {
             $image = $request->file('menu_pic');
-            $imagePath = $image->storeAs('public/menu_images', $image->hashName());
+            $imagePath = $image->storeAs('public/menu_images/', $image->hashName());
             $menu->menu_pic = $imagePath;
         }
         

@@ -17,7 +17,7 @@
                                 <div class="menu_card">
 
                                     <div class="menu_image">
-                                        <img src="{{ asset('frontend/images/our-cheffs2.jpg') }}" alt="Chef Image">
+                                        <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Chef Image">
                                     </div>
 
                                     <div class="small_card">
@@ -25,7 +25,7 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
+                                        <h2>Lobster</h2>
                                         <small>Food Supervisor</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
@@ -39,7 +39,7 @@
                                 <div class="menu_card">
 
                                     <div class="menu_image">
-                                        <img src="{{ asset('frontend/images/our-cheffs2.jpg') }}" alt="Chef Image">
+                                        <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Chef Image">
                                     </div>
 
                                     <div class="small_card">
@@ -47,7 +47,7 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
+                                        <h2>Lobster</h2>
                                         <small>Food Supervisor</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
@@ -61,7 +61,7 @@
                                 <div class="menu_card">
 
                                     <div class="menu_image">
-                                        <img src="{{ asset('frontend/images/our-cheffs2.jpg') }}" alt="Chef Image">
+                                        <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Chef Image">
                                     </div>
 
                                     <div class="small_card">
@@ -69,7 +69,7 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
+                                        <h2>Lobster</h2>
                                         <small>Food Supervisor</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
@@ -83,7 +83,7 @@
                                 <div class="menu_card">
 
                                     <div class="menu_image">
-                                        <img src="{{ asset('frontend/images/our-cheffs2.jpg') }}" alt="Chef Image">
+                                        <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Chef Image">
                                     </div>
 
                                     <div class="small_card">
@@ -91,7 +91,7 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
+                                        <h2>Lobster</h2>
                                         <small>Food Supervisor</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
@@ -105,7 +105,7 @@
                                 <div class="menu_card">
 
                                     <div class="menu_image">
-                                        <img src="{{ asset('frontend/images/our-cheffs2.jpg') }}" alt="Chef Image">
+                                        <img src="{{ asset('frontend/images/lobster1.png') }}" alt="Chef Image">
                                     </div>
 
                                     <div class="small_card">
@@ -113,7 +113,7 @@
                                     </div>
 
                                     <div class="menu_info">
-                                        <h2>Michael Reubens</h2>
+                                        <h2>Lobster</h2>
                                         <small>Food Supervisor</small>
                                         <p>Enjoy Delicious Food!</p>
                                         <a href="#" class="menu_btn">Order Now</a>
