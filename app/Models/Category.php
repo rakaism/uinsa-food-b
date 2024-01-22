@@ -14,7 +14,7 @@ class Category extends Model
      * @var array
      */
     protected $table = 'table_category';
-    protected $primaryKey = 'category_id';
+    protected $guarded = ['id'];
 
     protected $fillable = [
         'category_name',
