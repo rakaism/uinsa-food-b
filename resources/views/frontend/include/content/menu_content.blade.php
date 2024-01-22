@@ -4,11 +4,11 @@
 <div class="menu" id="Menu">
     <h1><span>Menu</span></h1>
     
-    <select name="category" id="category">
-        <option value="">Select Category</option>
-        @if($categories && count($categories) > 0)
-            @foreach($categories as $category)
-                <option value="{{ $category['id'] }}">{{ $category->category_name }}</option>
+    <select name="vendor" id="vendor">
+        <option value="">Select Vendor</option>
+        @if($vendors && count($vendors) > 0)
+            @foreach($vendors as $vendor)
+                <option value="{{ $vendor['id'] }}">{{ $vendor->vendor_name }}</option>
             @endforeach
         @endif
     </select>
