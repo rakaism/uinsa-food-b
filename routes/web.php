@@ -94,9 +94,9 @@ Route::middleware(['auth'])->group(function(){
     
 
 
+    ////////// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //////////
 
-
-       ////////// Seller Controller //////////
+    ////////// Seller Controller //////////
     Route::get('/seller', [SellerController::class, 'index'])->name('seller')->middleware('userAkses:seller');
     Route::get('/datamenuseller', [SellerMenuController::class, 'data_menu_seller'])->name('data_menu_seller')->middleware('userAkses:seller');
 });
