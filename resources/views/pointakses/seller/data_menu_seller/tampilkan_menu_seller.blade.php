@@ -3,7 +3,7 @@
 
 
     <div class="content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
-        <a href="{{ route('createmenu') }}" class="btn btn-success">Tambah Menu</a>
+        <a href="{{ route('createmenuseller') }}" class="btn btn-success">Tambah Menu</a>
         <div class="content">
             <div class="col-12 mt-4">
                 <div class="card">
@@ -59,13 +59,13 @@
 
                                         </td>
                                         <td>
-                                            <a href="{{ route('deletemenu', ['id' => $menu->id]) }}" class="btn btn-danger"
+                                            <a href="{{ route('deletemenuseller', ['id' => $menu->id]) }}" class="btn btn-danger"
                                                 onclick="return confirmDelete('{{ $menu->id }}', '{{ $menu->menu_name }}');">
                                                 Hapus
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="{{ route('editmenu', $menu->id) }}" class="btn btn-info">Edit</a>
+                                            <a href="{{ route('editmenuseller', $menu->id) }}" class="btn btn-info">Edit</a>
                                         </td>
                                     </tr>
                                 @endforeach

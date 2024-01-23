@@ -44,7 +44,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>M{{ $menu->id }}</td>
                                         <td class="text-center">
-                                            <img src="{{ url('storage/menu_images/' . basename($menu->menu_pic)) }}" class="rounded" style="width: 150px">
+                                        <img src="{{ url('storage/menu_images/' . basename($menu->menu_pic)) }}" class="rounded" style="width: 150px">
                                         </td>
                                         <td>{{ $menu->menu_name }}</td>
                                         <td>{{ $menu->menu_price }}</td>

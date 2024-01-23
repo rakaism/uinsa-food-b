@@ -3,12 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Menu;
-use App\Models\Category;
-use App\Models\Vendor;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use App\Models\Menu;
+use App\Models\Category;
 
 class MenuController extends Controller
 {
@@ -22,9 +21,8 @@ class MenuController extends Controller
     function create_menu()
     {
         $categories = Category::all();
-        $vendors = Vendor::all();
 
-        return view('pointakses/admin/data_menu/create', compact('categories', 'vendors'));
+        return view('pointakses/admin/data_menu/create', compact('categories'));
     }
 
     function store_menu(Request $request): RedirectResponse
@@ -37,7 +35,6 @@ class MenuController extends Controller
         $menu->menu_name = $request->input('menu_name');
         $menu->menu_price = $request->input('menu_price');
         $menu->category_id = $request->input('category');
-        $menu->vendor_id = $request->input('vendor');
         $menu->menu_desc = $request->input('menu_desc');
         $menu->save();
     
