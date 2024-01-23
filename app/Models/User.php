@@ -25,7 +25,8 @@ class User extends Authenticatable
         'no_tlp',
         'unit_kerja',
         'verify_key',
-        'role'
+        'role',
+        'alamat'
     ];
 
     /**

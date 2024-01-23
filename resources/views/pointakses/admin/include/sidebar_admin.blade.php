@@ -129,15 +129,6 @@
                        </ul>
                    </li>
                    <li class="nav-item">
-                      <span>
-                        <a href="{{route('data_pengguna')}}" class="nav-link">
-                           <i class="nav-icon fas fa-edit"></i>
-                               Data User
-                       </a>
-                        </span> 
-                    
-                   </li>
-                   <li class="nav-item">
                     <span>
                         <a href="{{route('datakategori')}}" class="nav-link">
                            <i class="nav-icon fas fa-table"></i>
@@ -159,17 +150,7 @@
                    </li>
                    <li class="nav-item">
                     <span>
-                        <a href="{{route('datavendor')}}" class="nav-link">
-                           <i class="nav-icon fas fa-table"></i>
-                           <p>
-                               Tabel Vendor
-                           </p>
-                       </a>
-                    </span>
-                   </li>
-                   <li class="nav-item">
-                    <span>
-                        <a href="#" class="nav-link">
+                        <a href="{{route('datamenu')}}" class="nav-link">
                            <i class="nav-icon fas fa-table"></i>
                            <p>
                                Tabel Order
@@ -177,7 +158,6 @@
                        </a>
                     </span>
                    </li>
-
 
                    <!-- Control Sidebar -->
                    <aside class="control-sidebar control-sidebar-dark">

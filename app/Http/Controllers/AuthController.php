@@ -35,6 +35,8 @@ class AuthController extends Controller
                     return redirect()->route('admin')->with('success', 'Halo Admin', 'Anda berhasil Login');
                 }else if(Auth::user()->role ==='user'){
                     return redirect()->route('user')->with('success', 'Anda berhasil Login');
+                }else if(Auth::user()->role ==='seller'){
+                    return redirect()->route('seller')->with('success', 'Anda berhasil Login');
                 }
                 
             }else {
@@ -60,6 +62,7 @@ class AuthController extends Controller
             'password' => 'required|min:6',
             'no_tlp' => 'required|min:11',
             'unit_kerja' => 'required|min:2',
+            'alamat' => 'required|min:2',
         ], [
             'nama_lengkap.required' => 'Nama Lengkap wajib diisi',
             'nama_lengkap.min' => 'Nama Lengkap minimal harus 5 karakter',
@@ -72,6 +75,8 @@ class AuthController extends Controller
             'no_tlp.min' => 'Nomor Telepon minimal harus 11 digit',
             'unit_kerja.required' => 'Unit Kerja wajib diisi',
             'unit_kerja.min' => 'Unit Kerja minimal harus 2 karakter',
+            'alamat.required' => 'alamat wajib diisi',
+            'alamat.min' => 'alamat minimal harus 2 karakter',
         ]);
         $inforegister = [
             'nama_lengkap' => $request->nama_lengkap,
@@ -79,6 +84,7 @@ class AuthController extends Controller
             'password' => $request->password,
             'no_tlp' => $request->no_tlp,
             'unit_kerja' => $request->unit_kerja,
+            'alamat' => $request->alamat,
             'verify_key' => $str
         ];
 

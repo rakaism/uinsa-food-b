@@ -4,11 +4,11 @@
 <div class="menu" id="Menu">
     <h1><span>Menu</span></h1>
     
-    <select name="vendor" id="vendor">
-        <option value="">Select Vendor</option>
-        @if($vendors && count($vendors) > 0)
-            @foreach($vendors as $vendor)
-                <option value="{{ $vendor['id'] }}">{{ $vendor->vendor_name }}</option>
+    <select name="category" id="category">
+        <option value="">Select Category</option>
+        @if($categories && count($categories) > 0)
+            @foreach($categories as $category)
+                <option value="{{ $category['id'] }}">{{ $category->category_name }}</option>
             @endforeach
         @endif
     </select>
@@ -21,7 +21,7 @@
         <div class="menu_card">
 
             <div class="menu_image">
-                <img src="{{ url('storage/menu_images/' . basename($menu->menu_pic)) }}">
+                <img src="{{ asset('storage/menu_images/' . $menu->menu_pic) }}">
             </div>
 
             <div class="small_card">
@@ -31,12 +31,6 @@
             <div class="menu_info">
                 <h2>{{ $menu->menu_name }}</h2>
                 <p>{{ $menu->menu_desc }}</p>
-                <h3>@if ($menu->vendor)
-                        {{ $menu->vendor->vendor_name }}
-                    @else
-                    No Vendor
-                    @endif
-                </h3> 
                 <h3>Rp. {{ $menu->menu_price }}</h3>
                 <div class="menu_icon">
                     <i class="icon-basket2"></i>
@@ -54,7 +48,7 @@
                 $.ajax({
                     url:"{{ route('menu' )}}",
                     type: "GET",
-                    data: {'category'.category},
+                    data: {category: category},
                     success:function(data){
                         var menus = data.menus;
                         var html = '';

@@ -8,8 +8,6 @@ use App\Models\Menu;
 
 use App\Models\Category;
 
-use App\Models\Vendor;
-
 class UserController extends Controller
 {
     public function index() {
@@ -34,15 +32,15 @@ class UserController extends Controller
 
     public function filterMenu_user(Request $request){
         $query = Menu::query();
-        $vendors = Vendor::all();
+        $categories = Category::all();
 
         if($request->ajax()){
-            $menus = $query->where(['vendor_id'=>$request->vendor])->get();
+            $menus = $query->where(['category_id'=>$request->category])->get();
             return response() -> json(['menus'=>$menus]);
         }
         $menus = $query->get();
 
-        return view ('pointakses/user/page_menu', compact('vendors', 'menus'));
+        return view ('pointakses/user/page_menu', compact('categories', 'menus'));
     }
 
     public function about_user(){

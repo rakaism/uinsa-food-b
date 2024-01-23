@@ -28,6 +28,7 @@
                         <table class="table table-hover text-nowrap">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>ID</th>
                                     <th>Gambar Menu</th>
                                     <th>Nama Menu</th>
@@ -40,7 +41,8 @@
                             <tbody>
                                 @foreach ($menus as $menu)
                                     <tr>
-                                        <td>{{ $menu->id }}</td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>M{{ $menu->id }}</td>
                                         <td class="text-center">
                                             <img src="{{ url('storage/menu_images/' . basename($menu->menu_pic)) }}" class="rounded" style="width: 150px">
                                         </td>
@@ -54,11 +56,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            @if ($menu->vendor)
-                                                {{ $menu->vendor->vendor_name }}
-                                            @else
-                                                No Vendor
-                                            @endif
+
                                         </td>
                                         <td>
                                             <a href="{{ route('deletemenu', ['id' => $menu->id]) }}" class="btn btn-danger"

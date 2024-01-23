@@ -107,6 +107,13 @@
                         <label for="unit_kerja" class="center-align">Unit Kerja</label>
                     </div>
                 </div>
+                <div class="row margin">
+                    <div class="input-field col s12">
+                        <i class="mdi-action-work prefix"></i>
+                        <input name="alamat" id="username" type="text">
+                        <label for="alamat" class="center-align">Alamat</label>
+                    </div>
+                </div>
 
                 <div class="input-field col s6 m6 l6">
                     <button type="submit" class="btn" style="background-color: #499848;">Regis</button>
